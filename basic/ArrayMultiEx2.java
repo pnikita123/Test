@@ -1,0 +1,70 @@
+package basic;
+
+import java.util.Scanner;
+
+public class ArrayMultiEx2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int p, q, m, n;   
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number of rows in the first matrix:");
+        p = sc.nextInt();    //Initialize first matrix size
+        System.out.print("Enter the number of columns in the first matrix:");
+        q = sc.nextInt();   //Initialize first matrix size
+        System.out.print("Enter the number of rows in the second matrix:");
+        m = sc.nextInt();   //Initialize second matrix size
+        System.out.print("Enter the number of columns in the second matrix:");
+        n = sc.nextInt();   //Initialize second matrix size
+        if (p == m && q == n) 
+        {
+            int a[][] = new int[p][q];    //Declare first matrix
+            int b[][] = new int[m][n];    //Declare second matrix
+            int c[][] = new int[m][n];    //Declare third matrix
+            //Initialize the first matrix
+            System.out.println("Enter all the elements of first matrix:");
+            for (int i = 0; i < p; i++) 
+            {
+                for (int j = 0; j < q; j++) 
+                {
+                    a[i][j] = sc.nextInt();
+                }
+            }
+            System.out.println("");
+            //Initialize the second matrix
+            System.out.println("Enter all the elements of second matrix:");
+            for (int i = 0; i < m; i++) 
+            {
+                for (int j = 0; j < n; j++) 
+                {
+                    b[i][j] = sc.nextInt();
+                }
+            }
+            System.out.println("");
+            //Print the first matrix
+            System.out.println("First Matrix:");
+            for (int i = 0; i < p; i++) 
+            {
+                for (int j = 0; j < q; j++) 
+                {
+                    System.out.print(a[i][j]+" ");
+                }
+                System.out.println("");
+            }
+            //Print the second matrix
+            System.out.println("Second Matrix:");
+            for (int i = 0; i < m; i++) 
+            {
+                for (int j = 0; j < n; j++) 
+                {
+                    System.out.print(b[i][j]+" ");
+                }
+                System.out.println("");
+            }
+             
+
+        }
+	}
+}
+
+
